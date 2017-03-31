@@ -1,7 +1,6 @@
 #!/bin/bash
 filename=`date +%Y-%m-%d`"-MkStone.sql"
-path="data/MkStone-backupSQL/"$filename
-mysqldump -uroot -p960722 MkStone > $path
+mysqldump -uroot -p960722 MkStone > $filename
 git add $filename
-gti commit
+git commit -m '"auto commit"'
 git push origin master
